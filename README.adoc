@@ -31,17 +31,15 @@ There are multiple ways to use the Google Cloud Storage based build cache inside
 --------------------------------------------------------------------
 buildscript {
     repositories {
-        maven {
-            url 'https://plugins.gradle.org/m2/'
-        }
+        gradlePluginPortal()
     }
 
     dependencies {
-        classpath 'net.idlestate:gradle-gcs-build-cache:1.0.1'
+        classpath 'si.kamino:gradle-gcs-build-cache:1.0.0'
     }
 }
 
-apply plugin: 'net.idlestate.gradle-gcs-build-cache'
+apply plugin: 'si.kamino.gradle-gcs-build-cache'
 
 buildCache {
     local {
@@ -71,12 +69,12 @@ buildscript {
     }
 
     dependencies {
-        classpath 'net.idlestate:gradle-gcs-build-cache:1.0.1'
+        classpath 'si.kamino:gradle-gcs-build-cache:1.0.1'
     }
 }
 
-import net.idlestate.gradle.caching.GCSBuildCache
-import net.idlestate.gradle.caching.GCSBuildCacheServiceFactory
+import si.kamino.gradle.caching.GCSBuildCache
+import si.kamino.gradle.caching.GCSBuildCacheServiceFactory
 
 buildCache {
     local {
@@ -108,11 +106,11 @@ initscript {
     }
 
     dependencies {
-        classpath 'net.idlestate:gradle-gcs-build-cache:1.0.1'
+        classpath 'si.kamino:gradle-gcs-build-cache:1.0.1'
     }
 }
 
-import net.idlestate.gradle.caching.GCSBuildCache
+import si.kamino.gradle.caching.GCSBuildCache
 import net.idlestate.gradle.caching.GCSBuildCacheServiceFactory
 
 gradle.settingsEvaluated { settings ->
